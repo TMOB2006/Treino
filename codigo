@@ -1,0 +1,81 @@
+repetidorI=True
+while (repetidorI==True):
+    div=0 
+    print("Bem vindo ao menu do Jogo")
+    escolha=input("digite a a opção entre A, B e C: ")
+ 
+    repetidorE=True
+    while (repetidorE==True):
+      if escolha=="A" or escolha=="a":
+          print("este é o modulo A")
+          num1=int(input("insira um numero: "))
+          for i in range(1,num1+1):
+            if num1 % i == 0:
+              div += 1   
+              
+          if div==2:
+            print(f"{num1} é um número primo")
+          else:
+            print(f"{num1} não é primo.")
+
+      elif escolha=="B"  or escolha=="b":
+          print("este é o modulo B")
+          num2=int(input("insira um número: "))
+          if num2%2==0:
+            print(f"{num2} é par")
+          else:
+            print(f"{num2} é impar")
+
+
+      else:
+            print("este é modulo C")
+            val1=int(input("insira um valor numerico: "))
+            int (val1)
+            print("simbolos de cada operação: adição:+, subtração:-, divisão:/, multiplicação:x, potenciação:**, radiciação:**1/")
+            import time
+            time.sleep(2)
+            oper=input("insira uma operação matematica(apenas digite o simbolo da operação): ")
+            val2=int(input("insira outro valor númerico: "))
+            int (val2)
+            if oper=="+":
+              val1+val2
+              print(val1, "+", val2, "=")
+              print(val1+val2)
+            elif oper=="-":
+              val1-val2
+              print(val1, "-", val2, "=")
+              print(val1-val2)
+            elif oper=="/":
+              val1/val2
+              print(val1, "/", val2, "=")
+              print(val1/val2)
+            elif oper=="x":
+              val1*val2 
+              print(val1, "x", val2, "=")
+              print(val1*val2)
+            elif oper=="**":
+              val1**val2
+              print(val1, "^", val2, "=")
+              print(val1**val2)
+            else:
+              if val2==2:
+                rad= val1**(1/val2)
+                print("√",val1,"=")
+                print(val1**(1/val2))
+              else:
+                val1**(1/val2)
+                print(val1,"√",val2,"=")
+                print(val1**(1/val2))
+      comando=input("se deseja voltar para o menu aperte v, se deseja continuar aperte c, ou se vc deseja sair do programa aperte s: ")
+      if comando=="v":
+        repetidorI=True
+        repetidorE=False
+      elif comando== "c":
+        repetidorE=True
+      else:
+        repetidorE=False
+        repetidorI=False
+        print("programa finalizado")
+        import time
+        time.sleep(1)
+        print("obrigado por jogar :)")
